@@ -12,6 +12,10 @@ class Subscription extends Model
     protected $table = 'subscriptions';
 
     protected $fillable = [
-        'email',
+        'email', 'status',
+    ];
+
+    protected $attributes = [
+        'status' => 1, // Default value for 'status'
     ];
 }

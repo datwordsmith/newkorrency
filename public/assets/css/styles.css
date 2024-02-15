@@ -184,6 +184,14 @@ body {
 
 }
 
+.form-select, .form-select:focus {
+    box-shadow: none !important;
+}
+
+input, input:focus {
+    box-shadow: none !important;
+}
+
 .light-bg {
     background-color: #DDEDFF;
 }
@@ -453,6 +461,21 @@ main {
 
 .kbtn-dark:hover {
     background-color: #042E62 !important;
+    box-shadow: 0 4px 8px rgba(124, 105, 105, 0.1);
+    color: #A4C7FA !important;
+}
+
+.kbtn-secondary {
+    background-color: #7f8286;
+    border: 2px #7f8286 solid;
+    border-radius: 25px;
+    color: white;
+    font-size:small;
+    transition: box-shadow 0.5s; /* Adding a transition for a smooth effect */
+}
+
+.kbtn-secondary:hover {
+    background-color: #7f8286 !important;
     box-shadow: 0 4px 8px rgba(124, 105, 105, 0.1);
     color: #A4C7FA !important;
 }

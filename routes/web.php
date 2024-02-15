@@ -16,11 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', App\Http\Livewire\Main\Index::class)->name('homepage');
 Route::get('/', App\Http\Livewire\Main\Index::class)->name('homepage');
-Route::get('/register', App\Http\Livewire\Main\Index::class)->name('homepage');
+
+Route::get('/home', function () {
+    return redirect()->route('homepage');
+});
+
+Route::get('/register', function () {
+    return redirect()->route('homepage');
+});
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function (){
-    Route::get('/', App\Http\Livewire\Admin\Index::class);
+    Route::get('/', App\Http\Livewire\Admin\Index::class)->name('admin');
 });
 

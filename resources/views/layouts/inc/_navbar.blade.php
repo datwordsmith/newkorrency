@@ -24,6 +24,9 @@
 
             @else
                 <li class="nav-item">
+                    <a class="nav-link ms-3" href="{{ route('admin') }}">Dashboard</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn btn-danger ms-lg-3 text-white" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
